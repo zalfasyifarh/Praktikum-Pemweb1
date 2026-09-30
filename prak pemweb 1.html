@@ -1,0 +1,128 @@
+<!DOCTYPE html> 
+<html lang="id">
+    <header>
+        <h1>Sistem Informasi Data Mahasiswa-Praktikum 1-Kelas C</h1>
+        <p>Sistem ini merupakan sistem yang dibuat untuk
+            memberikan informasi mahasiswa yang mengikuti
+            praktikum 1 kelas c
+        </p>
+        <img src="611715561932134217.jpg" alt="gambar 1" width="100" length="100">
+    </header>
+    <hr>
+    <nav>
+        <ul>
+            <li> <a href="#informasi"> informasi sistem </a></li>
+            <li> <a href="#daftar-mahasiswa"> daftar mahasiswa</a></li>
+            <li> <a hrf="#form-tambah"> tambah mahasiswa</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <main>
+        <section id="informasi">
+            <h2>Informasi Sistem</h2>
+            <p>Dalam infomasi sistem ini akan memberikan
+                informasi mengenai sistem ini
+            </p>
+            <article>
+                <h3>Mengenai Sistem</h3>
+                <p>merupakan sistem yang dibuat untuk</p>
+            </article>
+        </section>
+    </main>
+
+    <hr>
+
+    <section id="daftar-mahasiswa">
+        <h2>Daftar Mahasiswa Aktif</h2>
+        <p>Berikut merupakan mahasiswa aktif yang berada dalam praktikum</p>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>NO</th>
+                    <th>Foto</th>
+                    <th>NPM</th>
+                    <th>Nama Lengkap</th>
+                    <th>Program Studi</th>
+                    <th>Angkatan</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><img src=".jpg"></td>
+                    <td>2415061118</td>
+                    <td>Zalfa Syifa Rhoiqoh</td>
+                    <td>Teknik Informatika</td>
+                    <td>2024</td>
+                    <td>zalfasyifa7@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><img src=""></td>
+                    <td>251936238</td>
+                    <td>Rei</td>
+                    <td>Teknik Kehutanan</td>
+                    <td>2025</td>
+                    <td>rei@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><img src=""></td>
+                    <td>2693432748</td>
+                    <td>Miya</td>
+                    <td>Sastra Teknik</td>
+                    <td>2026</td>
+                    <td>miya31@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <hr>
+
+    <section id="form-tambah">
+        <h2>Tambah Mahasiswa Baru</h2>
+        <p>untuk menambah mahasiswa baru</p>
+
+        <form action="#" method="POST">
+            <fieldset>
+                <legend>Penambahan Mahasiswa</legend>
+                <p>
+                    <label for="npm">
+                        <br> <input
+                        type="text"
+                        id="npm"
+                        name="npm"
+                        placeholder="" value="contoh:2315061118"
+                        required
+                        pattern="[0-9]{8,12}"
+                        title= value="NPM harus berupa angka 8-12 digit">
+                        <br> <small></small>
+                    </label>
+                    <label for="nama">
+                        <br> <input
+                        type="text"
+                        id="nama"
+                        name="nama"
+                        placeholder="Contoh : M. Sidiq Firdaus"
+                        required
+                        minlength="3"
+                        maxlength="100">
+                        <br> <small></small>
+                    </label for="program_studi">
+                    <br><select>
+                    id="program_studi"
+                    name="program_studi"
+                    required
+                    <option>Pilih Program Studi</option>
+                    <option>Teknik Informatika</option>
+                    </select>
+                    <label></label>
+                </p>
+            </fieldset>
+        </form>
+    </section>
+</html>
