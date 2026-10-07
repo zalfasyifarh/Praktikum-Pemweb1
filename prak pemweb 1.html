@@ -1,19 +1,36 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
+
 <html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Informasi Data Mahasiswa</title>
+</head>
+
+<body>
+
     <header>
         <h1>Sistem Informasi Data Mahasiswa-Praktikum 1-Kelas C</h1>
-        <p>Sistem ini merupakan sistem yang dibuat untuk
+
+        <p>
+            Sistem ini merupakan sistem yang dibuat untuk
             memberikan informasi mahasiswa yang mengikuti
-            praktikum 1 kelas c
+            praktikum 1 kelas C
         </p>
-        <img src="611715561932134217.jpg" alt="gambar 1" width="100" length="100">
+
+        <img src="611715561932134217.jpg" alt="gambar 1"
+        width="100"
+        height="100">
     </header>
+
     <hr>
+
     <nav>
         <ul>
-            <li> <a href="#informasi"> informasi sistem </a></li>
-            <li> <a href="#daftar-mahasiswa"> daftar mahasiswa</a></li>
-            <li> <a hrf="#form-tambah"> tambah mahasiswa</a></li>
+            <li><a href="#informasi">Informasi Sistem</a></li>
+            <li><a href="#daftar-mahasiswa">Daftar Mahasiswa</a></li>
+            <li><a href="#form-tambah">Tambah Mahasiswa</a></li>
         </ul>
     </nav>
 
@@ -22,22 +39,38 @@
     <main>
         <section id="informasi">
             <h2>Informasi Sistem</h2>
-            <p>Dalam infomasi sistem ini akan memberikan
-                informasi mengenai sistem ini
+
+            <p>
+                Dalam informasi sistem ini akan memberikan
+                informasi mengenai sistem ini.
             </p>
+
             <article>
                 <h3>Mengenai Sistem</h3>
-                <p>merupakan sistem yang dibuat untuk</p>
+
+                <p>
+                    Merupakan sistem yang dibuat untuk
+                    memberikan informasi mengenai mahasiswa
+                    yang mengikuti praktikum.
+                </p>
             </article>
         </section>
+
     </main>
 
     <hr>
 
     <section id="daftar-mahasiswa">
+
         <h2>Daftar Mahasiswa Aktif</h2>
-        <p>Berikut merupakan mahasiswa aktif yang berada dalam praktikum</p>
-        <table border="1">
+
+        <p>
+            Berikut merupakan mahasiswa aktif yang berada
+            dalam praktikum.
+        </p>
+
+        <table border="1" cellpadding="8" cellspacing="0">
+
             <thead>
                 <tr>
                     <th>NO</th>
@@ -49,28 +82,38 @@
                     <th>Email</th>
                 </tr>
             </thead>
+
             <tbody>
+
                 <tr>
                     <td>1</td>
-                    <td><img src=".jpg"></td>
+                    <td>
+                        <img src=".jpg" alt="Foto Zalfa" width="80" height="80">
+                    </td>
                     <td>2415061118</td>
                     <td>Zalfa Syifa Rhoiqoh</td>
                     <td>Teknik Informatika</td>
                     <td>2024</td>
                     <td>zalfasyifa7@gmail.com</td>
                 </tr>
+
                 <tr>
                     <td>2</td>
-                    <td><img src=""></td>
+                    <td>
+                        <img src="" alt="Foto Rei" width="80" height="80">
+                    </td>
                     <td>251936238</td>
                     <td>Rei</td>
                     <td>Teknik Kehutanan</td>
                     <td>2025</td>
                     <td>rei@gmail.com</td>
                 </tr>
+
                 <tr>
                     <td>3</td>
-                    <td><img src=""></td>
+                    <td>
+                        <img src="" alt="Foto Miya" width="80" height="80">
+                    </td>
                     <td>2693432748</td>
                     <td>Miya</td>
                     <td>Sastra Teknik</td>
@@ -84,45 +127,132 @@
     <hr>
 
     <section id="form-tambah">
+
         <h2>Tambah Mahasiswa Baru</h2>
-        <p>untuk menambah mahasiswa baru</p>
+
+        <p>Untuk menambah mahasiswa baru.</p>
 
         <form action="#" method="POST">
+
             <fieldset>
+
                 <legend>Penambahan Mahasiswa</legend>
+
                 <p>
                     <label for="npm">
-                        <br> <input
+                        Nomor Pokok Mahasiswa (NPM):
+                    </label>
+                    <br>
+
+                    <input
                         type="text"
                         id="npm"
                         name="npm"
-                        placeholder="" value="contoh:2315061118"
+                        placeholder="Contoh: 2315061118"
                         required
                         pattern="[0-9]{8,12}"
-                        title= value="NPM harus berupa angka 8-12 digit">
-                        <br> <small></small>
-                    </label>
+                        title="NPM harus berupa angka 8-12 digit">
+
+                    <br>
+                    <small>NPM harus berupa angka 8-12 digit.</small>
+                </p>
+
+                <p>
                     <label for="nama">
-                        <br> <input
+                        Nama Lengkap:
+                    </label>
+                    <br>
+
+                    <input
                         type="text"
                         id="nama"
                         name="nama"
-                        placeholder="Contoh : M. Sidiq Firdaus"
+                        placeholder="Contoh: M. Sidiq Firdaus"
                         required
                         minlength="3"
                         maxlength="100">
-                        <br> <small></small>
-                    </label for="program_studi">
-                    <br><select>
-                    id="program_studi"
-                    name="program_studi"
-                    required
-                    <option>Pilih Program Studi</option>
-                    <option>Teknik Informatika</option>
-                    </select>
-                    <label></label>
+
+                    <br>
+                    <small>Masukkan nama lengkap.</small>
                 </p>
+
+                <p>
+                    <label for="program_studi">
+                        Program Studi:
+                    </label>
+                    <br>
+
+                    <select
+                        id="program_studi"
+                        name="program_studi"
+                        required>
+
+                        <option value="">Pilih Program Studi</option>
+                        <option value="Teknik Informatika">
+                            Teknik Informatika
+                        </option>
+                        <option value="Teknik Kehutanan">
+                            Teknik Kehutanan
+                        </option>
+
+                    </select>
+
+                    <br>
+                    <small>Pilih program studi.</small>
+                </p>
+
+                <p>
+                    <label for="angkatan">
+                        Tahun Angkatan:
+                    </label>
+                    <br>
+
+                    <input
+                        type="number"
+                        id="angkatan"
+                        name="angkatan"
+                        placeholder="Contoh: 2024"
+                        required
+                        min="2018"
+                        max="2026">
+
+                    <br>
+                    <small>Masukkan tahun angkatan.</small>
+                </p>
+
+                <p>
+                    <label for="email">
+                        Alamat Email:
+                    </label>
+                    <br>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Contoh: email@example.com"
+                        required>
+
+                    <br>
+                    <small>Masukkan alamat email yang aktif.</small>
+                </p>
+
+                <p>
+                    <button type="submit">
+                        Simpan Data Mahasiswa
+                    </button>
+
+                    <button type="reset">
+                        Reset Formulir
+                    </button>
+                </p>
+
             </fieldset>
+
         </form>
+
     </section>
+
+</body>
+
 </html>
