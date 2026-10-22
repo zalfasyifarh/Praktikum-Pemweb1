@@ -25,11 +25,12 @@ let dataMahasiswa = [
 
 // 2. Elemen Dom Utama.
 const alertBox = document.getElementById("alert-box");
-const tabelBody = document.getElementById("tabel-body-mahsiswa");
+const tabelBody = document.getElementById("tabel-body-mahasiswa");
 const totalBadge = document.getElementById("total-mahasiswa-badge");
-const totalInfo = document.getElementById("total-mahasiswa-info")
+const totalInfo = document.getElementById("total-mahasiswa-info");
 
 // Seleksi Elemen Formulir Tambah Mahasiswa
+const inputSearch = document.getElementById("input-search");
 const formTambah = document.getElementById("form-tambah-mahasiswa");
 const inputNpm = document.getElementById("npm");
 const inputNama = document.getElementById("nama");
@@ -84,7 +85,6 @@ function renderTable(data = dataMahasiswa) {
        `;
        updateCounter(0);
        return   
-    }
 }
 
     
@@ -93,7 +93,7 @@ function renderTable(data = dataMahasiswa) {
         tr.innerHTML=`
         <td>${index + 1} </td>
         <td>
-        <img scr="img/avatar-default.svg" alt="Foto ${mhs.nama}"
+        <img src="img/avatar-default.svg" alt="Foto ${mhs.nama}"
         class="avatar-img" width="36" height="36">
         </td>
         <td><strong>${mhs.npm}</strong> </td>
@@ -112,19 +112,19 @@ function renderTable(data = dataMahasiswa) {
     });
 
    updateCounter(data.length);
-
+}
 
 document.addEventListener("DOMContentLoaded", function (){
     renderTable(dataMahasiswa);
 });
 
 // 6. Validasi Form Sisi Klien Menggunakan Regular Expression (Percobaan 3-3).
-function validateForm(npm, prodi, angkatan, email) {
+function validateForm(npm, nama, prodi, angkatan, email) {
     if (!/^[0-9]{8,12}$/.test(npm)) {
-    return { isValid: true, message: "NIM harus berupa 8-12 digit angka."};
+    return { isValid: false, message: "NIM harus berupa 8-12 digit angka."};
 }
-if (dataMahasiswa.some(mhs => mhs.nim == nim)) {
-    return {isValid: false, message: `NIM ${nim} sudah terdaftar dalam sistem
+if (dataMahasiswa.some(mhs => mhs.npm === npm)) {
+    return {isValid: false, message: `NIM ${npm} sudah terdaftar dalam sistem
     SIMA.`};
 }
 
@@ -138,7 +138,7 @@ if (!prodi) {
 
 const angk = parseInt(angkatan, 10);
 if (isNaN(angk) || angk < 2018 || angk > 2026) {
-    return{ isValid: false, message: "Tahun angkatan harus berupa angka antara 2018 hingga 2026."}.
+    return{ isValid: true, message: "Tahun angkatan harus berupa angka antara 2018 hingga 2026."};
 }
 
 if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -160,7 +160,7 @@ if (formTambah) {
         const nama = inputNama.value.trim()
         const prodi = selectProdi.value;
         const angkatan = inputAngkatan.value.trim();
-        const email = inputEmail.value.trin();
+        const email = inputEmail.value.trim();
 
         const validation = validateForm(npm, nama, prodi, angkatan, email);
         
@@ -201,7 +201,7 @@ function hapusMahasiswa(npm) {
     if (konfirmasi) {
         dataMahasiswa = dataMahasiswa.filter(item => item.nim !== nim);
         renderTable(dataMahasiswa);
-        showAlert(`Data mahasiswa dengan NIM #{nim} berhasil dihapus dari sistem.` "info");
+        showAlert(`Data mahasiswa dengan NIM ${nim} berhasil dihapus dari sistem.`, "info");
     }
 }
 
@@ -225,8 +225,4 @@ if (inputSearch) {
     });
 }
 
-// Inisialisasi saat DOM selesai dimuat
 
-document.addEventListener(
-    
-)
