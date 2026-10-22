@@ -32,7 +32,7 @@ $total_tampil = count($daftar_mahasiswa);
 // Ambil flash message dari session jika tersedia
 $flash = get_flash_message();
 
-$page_title = 'Beranda - Sistem Informasi Data Mahasiswa';
+$page_title = 'SIMA - Modul 4 PHP Server Side Dinamis';
 require_once __DIR__ . '/includes/header.php';
 ?>
 
